@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.NETCoreApp1", "Avalonia.NETCoreApp1\Avalonia.NETCoreApp1.csproj", "{F3B1B4C4-D220-4B0F-A6EC-D01CCB8F55ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YawPitchRollTransformDemo", "YawPitchRollTransformDemo\YawPitchRollTransformDemo.csproj", "{F3B1B4C4-D220-4B0F-A6EC-D01CCB8F55ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

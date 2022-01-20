@@ -1,20 +1,21 @@
 ﻿using System;
 using System.Numerics;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
 
-namespace Avalonia.NETCoreApp1
+namespace YawPitchRollTransformDemo
 {
-    public class Custom : Decorator
+    public class YawPitchRollTransformControl : Decorator
     {
         public static readonly StyledProperty<double> YawProperty = 
-            AvaloniaProperty.Register<Custom, double>(nameof(Yaw));
+            AvaloniaProperty.Register<YawPitchRollTransformControl, double>(nameof(Yaw));
 
         public static readonly StyledProperty<double> PitchProperty = 
-            AvaloniaProperty.Register<Custom, double>(nameof(Pitch));
+            AvaloniaProperty.Register<YawPitchRollTransformControl, double>(nameof(Pitch));
 
         public static readonly StyledProperty<double> RollProperty = 
-            AvaloniaProperty.Register<Custom, double>(nameof(Roll));
+            AvaloniaProperty.Register<YawPitchRollTransformControl, double>(nameof(Roll));
 
         public double Yaw
         {
@@ -48,7 +49,6 @@ namespace Avalonia.NETCoreApp1
                 || change.Property == RollProperty)
             {
                 SetChildTransform();
-                //InvalidateVisual();
             }
             
             base.OnPropertyChanged(change);
@@ -74,14 +74,6 @@ namespace Avalonia.NETCoreApp1
             var m = Matrix4x4.CreateFromQuaternion(q);
 
             return new Matrix(m.M11, m.M12, m.M21, m.M22, m.M31, m.M32);
-        }
-
-        public override void Render(DrawingContext context)
-        {
-            //var op = new CustomDrawOp(Yaw, Pitch, Roll, Bounds);
-            //context.Custom(op);
-            
-            base.Render(context);
         }
     }
 }

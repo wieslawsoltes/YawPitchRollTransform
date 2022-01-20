@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 
-namespace Avalonia.NETCoreApp1
+namespace YawPitchRollTransformDemo
 {
     public class App : Application
     {

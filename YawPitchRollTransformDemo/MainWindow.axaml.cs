@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace Avalonia.NETCoreApp1
+namespace YawPitchRollTransformDemo
 {
     public partial class MainWindow : Window
     {
