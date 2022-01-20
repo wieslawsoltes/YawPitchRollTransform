@@ -78,8 +78,7 @@ namespace Avalonia.NETCoreApp1
 
         public override void Render(DrawingContext context)
         {
-            var op = new CustomDrawOp(Yaw, Pitch, Roll, Bounds);
-
+            //var op = new CustomDrawOp(Yaw, Pitch, Roll, Bounds);
             //context.Custom(op);
             
             base.Render(context);
