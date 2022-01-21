@@ -2,21 +2,20 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace YawPitchRollTransformDemo
-{
-    public partial class MainWindow : Window
-    {
-        public MainWindow()
-        {
-            InitializeComponent();
-#if DEBUG
-            this.AttachDevTools();
-#endif
-        }
+namespace YawPitchRollTransformDemo;
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
+public partial class MainWindow : Window
+{
+    public MainWindow()
+    {
+        InitializeComponent();
+#if DEBUG
+        this.AttachDevTools();
+#endif
+    }
+
+    private void InitializeComponent()
+    {
+        AvaloniaXamlLoader.Load(this);
     }
 }
