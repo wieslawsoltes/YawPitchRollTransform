@@ -19,8 +19,8 @@ jobs:
     - name: Publish .NET Project
       run: dotnet publish YawPitchRollTransform.Web/YawPitchRollTransform.Web.csproj -c Release -o release --nologo
 
-    - name: Change base-tag in index.html from / to YawPitchRollTransform
-      run: sed -i 's/<base href="\/" \/>/<base href="\/YawPitchRollTransform\/" \/>/g' release/wwwroot/index.html
+    - name: Change base-tag in index.html from / to YawPitchRollTransformControl
+      run: sed -i 's/<base href="\/" \/>/<base href="\/YawPitchRollTransformControl\/" \/>/g' release/wwwroot/index.html
 
     - name: copy index.html to 404.html
       run: cp release/wwwroot/index.html release/wwwroot/404.html
