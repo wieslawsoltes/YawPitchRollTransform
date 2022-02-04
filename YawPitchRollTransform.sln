@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YawPitchRollTransform", "YawPitchRollTransform\YawPitchRollTransform.csproj", "{F3B1B4C4-D220-4B0F-A6EC-D01CCB8F55ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AA22FBF8-8D4C-4B8A-AFEC-D7EF2F9EE5CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YawPitchRollTransform.Base", "YawPitchRollTransform.Base\YawPitchRollTransform.Base.csproj", "{7BB78616-CD26-43C1-9306-D5CB6398081A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YawPitchRollTransform.Desktop", "YawPitchRollTransform.Desktop\YawPitchRollTransform.Desktop.csproj", "{EC352187-02D6-4A10-A460-412BD5A2011B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3B1B4C4-D220-4B0F-A6EC-D01CCB8F55ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3B1B4C4-D220-4B0F-A6EC-D01CCB8F55ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3B1B4C4-D220-4B0F-A6EC-D01CCB8F55ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3B1B4C4-D220-4B0F-A6EC-D01CCB8F55ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BB78616-CD26-43C1-9306-D5CB6398081A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB78616-CD26-43C1-9306-D5CB6398081A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BB78616-CD26-43C1-9306-D5CB6398081A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BB78616-CD26-43C1-9306-D5CB6398081A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC352187-02D6-4A10-A460-412BD5A2011B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC352187-02D6-4A10-A460-412BD5A2011B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC352187-02D6-4A10-A460-412BD5A2011B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC352187-02D6-4A10-A460-412BD5A2011B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F3B1B4C4-D220-4B0F-A6EC-D01CCB8F55ED} = {AA22FBF8-8D4C-4B8A-AFEC-D7EF2F9EE5CD}
+		{7BB78616-CD26-43C1-9306-D5CB6398081A} = {AA22FBF8-8D4C-4B8A-AFEC-D7EF2F9EE5CD}
+		{EC352187-02D6-4A10-A460-412BD5A2011B} = {AA22FBF8-8D4C-4B8A-AFEC-D7EF2F9EE5CD}
+	EndGlobalSection
+EndGlobal

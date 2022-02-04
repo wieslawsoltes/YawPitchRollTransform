@@ -4,7 +4,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
 
-namespace YawPitchRollTransformDemo;
+namespace YawPitchRollTransform;
 
 public class YawPitchRollTransformControl : Decorator
 {
@@ -69,10 +69,8 @@ public class YawPitchRollTransformControl : Decorator
         var yawRadians = (float)DegreeToRadian(yaw);
         var pitchRadians = (float)DegreeToRadian(pitch);
         var rollRadians = (float)DegreeToRadian(roll);
-
         var q = Quaternion.CreateFromYawPitchRoll(yawRadians, pitchRadians, rollRadians);
         var m = Matrix4x4.CreateFromQuaternion(q);
-
         return new Matrix(m.M11, m.M12, m.M21, m.M22, m.M31, m.M32);
     }
 }
