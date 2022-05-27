@@ -22,7 +22,7 @@
       <Style.Animations>
         <Animation Duration="0:0:1" Easing="BounceEaseInOut" SpeedRatio="0.1" IterationCount="Infinite">
           <KeyFrame Cue="100%">
-            <Setter Property="YawPitchRollTransform.Yaw" Value="360" />
+            <Setter Property="Rotate3DTransform.AngleY" Value="360" />
           </KeyFrame>
         </Animation>
       </Style.Animations>
@@ -31,7 +31,7 @@
       <Style.Animations>
         <Animation Duration="0:0:1" Easing="BounceEaseInOut" SpeedRatio="0.1" IterationCount="Infinite">
           <KeyFrame Cue="100%">
-            <Setter Property="YawPitchRollTransform.Pitch" Value="360" />
+            <Setter Property="Rotate3DTransform.AngleX" Value="360" />
           </KeyFrame>
         </Animation>
       </Style.Animations>
@@ -40,7 +40,7 @@
       <Style.Animations>
         <Animation Duration="0:0:1" Easing="BounceEaseInOut" SpeedRatio="0.1" IterationCount="Infinite">
           <KeyFrame Cue="100%">
-            <Setter Property="YawPitchRollTransform.Roll" Value="360" />
+            <Setter Property="Rotate3DTransform.AngleZ" Value="360" />
           </KeyFrame>
         </Animation>
       </Style.Animations>
@@ -68,9 +68,9 @@
               Classes.animatePitch="{Binding #AnimatePitch.IsChecked}"
               Classes.animateRoll="{Binding #AnimateRoll.IsChecked}">
         <Border.RenderTransform>
-          <YawPitchRollTransform Yaw="{Binding #Yaw.Value}" 
-                                 Pitch="{Binding #Pitch.Value}" 
-                                 Roll="{Binding #Roll.Value}" />
+          <Rotate3DTransform AngleY="{Binding #Yaw.Value}" 
+                             AngleX="{Binding #Pitch.Value}" 
+                             AngleZ="{Binding #Roll.Value}" />
         </Border.RenderTransform>
         <StackPanel VerticalAlignment="Center" Spacing="10" Margin="10,0,10,0">
           <TextBox Watermark="Enter password" PasswordChar="*" Text="" />
