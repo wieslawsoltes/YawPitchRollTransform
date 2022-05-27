@@ -1,3 +1,4 @@
 ﻿using Avalonia.Metadata;
 
-[assembly: XmlnsDefinition("https://github.com/avaloniaui", "YawPitchRollTransform")]
+[assembly: XmlnsDefinition("https://github.com/avaloniaui", "Avalonia.Media")]
+

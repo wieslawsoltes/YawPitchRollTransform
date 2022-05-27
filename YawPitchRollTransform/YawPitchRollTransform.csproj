@@ -6,6 +6,6 @@
     <RootNamespace>YawPitchRollTransform</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)"/>
+    <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
   </ItemGroup>
 </Project>
