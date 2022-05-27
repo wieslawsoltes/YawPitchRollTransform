@@ -42,7 +42,7 @@ public class YawPitchRollTransformControl : Decorator
         base.OnAttachedToVisualTree(e);
     }
 
-    protected override void OnPropertyChanged<T>(AvaloniaPropertyChangedEventArgs<T> change)
+    protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
     {
         if (change.Property == YawProperty
             || change.Property == PitchProperty
@@ -71,6 +71,6 @@ public class YawPitchRollTransformControl : Decorator
         var rollRadians = (float)DegreeToRadian(roll);
         var q = Quaternion.CreateFromYawPitchRoll(yawRadians, pitchRadians, rollRadians);
         var m = Matrix4x4.CreateFromQuaternion(q);
-        return new Matrix(m.M11, m.M12, m.M21, m.M22, m.M31, m.M32);
+        return new Matrix(m.M11, m.M12, m.M14, m.M21, m.M22, m.M24, m.M41, m.M42, m.M44);
     }
 }
