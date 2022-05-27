@@ -21,18 +21,39 @@
     <Border Width="500" Height="500" Background="WhiteSmoke">
 
       <Border.Styles>
-        <Style Selector="Border.animate">
+        <Style Selector="Border.animateYaw">
           <Style.Animations>
             <Animation Duration="0:0:1" Easing="BounceEaseInOut" SpeedRatio="0.1" IterationCount="Infinite">
               <KeyFrame Cue="100%">
-                <Setter Property="YawPitchRollTransform.Pitch" Value="365" />
+                <Setter Property="YawPitchRollTransform.Yaw" Value="360" />
+              </KeyFrame>
+            </Animation>
+          </Style.Animations>
+        </Style>
+        <Style Selector="Border.animatePitch">
+          <Style.Animations>
+            <Animation Duration="0:0:1" Easing="BounceEaseInOut" SpeedRatio="0.1" IterationCount="Infinite">
+              <KeyFrame Cue="100%">
+                <Setter Property="YawPitchRollTransform.Pitch" Value="360" />
+              </KeyFrame>
+            </Animation>
+          </Style.Animations>
+        </Style>
+        <Style Selector="Border.animateRoll">
+          <Style.Animations>
+            <Animation Duration="0:0:1" Easing="BounceEaseInOut" SpeedRatio="0.1" IterationCount="Infinite">
+              <KeyFrame Cue="100%">
+                <Setter Property="YawPitchRollTransform.Roll" Value="360" />
               </KeyFrame>
             </Animation>
           </Style.Animations>
         </Style>
       </Border.Styles>
 
-      <Border Width="200" Height="200" BorderBrush="Red" BorderThickness="2" CornerRadius="10" Classes.animate="{Binding #Animate.IsChecked}">
+      <Border Width="200" Height="200" BorderBrush="Red" BorderThickness="2" CornerRadius="10" 
+              Classes.animateYaw="{Binding #AnimateYaw.IsChecked}"
+              Classes.animatePitch="{Binding #AnimatePitch.IsChecked}"
+              Classes.animateRoll="{Binding #AnimateRoll.IsChecked}">
         <Border.RenderTransform>
           <YawPitchRollTransform Yaw="{Binding #Yaw.Value}" 
                                  Pitch="{Binding #Pitch.Value}" 
@@ -41,7 +62,9 @@
         <StackPanel VerticalAlignment="Center" Spacing="10" Margin="10,0,10,0">
           <TextBox Watermark="Enter password" PasswordChar="*" Text="" />
           <Button Content="Login" />
-          <CheckBox Name="Animate" Content="Animate" />
+          <CheckBox Name="AnimateYaw" Content="Animate Yaw" />
+          <CheckBox Name="AnimatePitch" Content="Animate Pitch" />
+          <CheckBox Name="AnimateRoll" Content="Animate Roll" />
         </StackPanel>
       </Border>
 
