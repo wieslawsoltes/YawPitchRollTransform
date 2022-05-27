@@ -4,51 +4,64 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="YawPitchRollTransform.MainView">
+  <UserControl.Styles>
+    <Style Selector="Slider">
+      <Setter Property="Minimum" Value="0" />
+      <Setter Property="Maximum" Value="360" />
+      <Setter Property="SmallChange" Value="0.1" />
+      <Setter Property="LargeChange" Value="1" />
+      <Setter Property="IsSnapToTickEnabled" Value="True" />
+      <Setter Property="TickFrequency" Value="1" />
+    </Style>
+    <Style Selector="NumericUpDown">
+      <Setter Property="Minimum" Value="0" />
+      <Setter Property="Maximum" Value="360" />
+      <Setter Property="Increment" Value="1" />
+    </Style>
+    <Style Selector=":is(Control).animateYaw">
+      <Style.Animations>
+        <Animation Duration="0:0:1" Easing="BounceEaseInOut" SpeedRatio="0.1" IterationCount="Infinite">
+          <KeyFrame Cue="100%">
+            <Setter Property="YawPitchRollTransform.Yaw" Value="360" />
+          </KeyFrame>
+        </Animation>
+      </Style.Animations>
+    </Style>
+    <Style Selector=":is(Control).animatePitch">
+      <Style.Animations>
+        <Animation Duration="0:0:1" Easing="BounceEaseInOut" SpeedRatio="0.1" IterationCount="Infinite">
+          <KeyFrame Cue="100%">
+            <Setter Property="YawPitchRollTransform.Pitch" Value="360" />
+          </KeyFrame>
+        </Animation>
+      </Style.Animations>
+    </Style>
+    <Style Selector=":is(Control).animateRoll">
+      <Style.Animations>
+        <Animation Duration="0:0:1" Easing="BounceEaseInOut" SpeedRatio="0.1" IterationCount="Infinite">
+          <KeyFrame Cue="100%">
+            <Setter Property="YawPitchRollTransform.Roll" Value="360" />
+          </KeyFrame>
+        </Animation>
+      </Style.Animations>
+    </Style>
+  </UserControl.Styles>
+
   <DockPanel>
 
-    <StackPanel Width="200">
+    <StackPanel Width="200" Margin="12" Spacing="0">
       <Label Content="Yaw" />
-      <Slider x:Name="Yaw" Value="45" Minimum="0" Maximum="360" SmallChange="0.1" LargeChange="1" IsSnapToTickEnabled="True" TickFrequency="1" />
-      <NumericUpDown Minimum="0" Maximum="360" Increment="1" Value="{Binding #Yaw.Value}" />
+      <Slider x:Name="Yaw" Value="45" />
+      <NumericUpDown Value="{Binding #Yaw.Value}" />
       <Label Content="Pitch" />
-      <Slider x:Name="Pitch" Value="45" Minimum="0" Maximum="360" SmallChange="0.1" LargeChange="1" IsSnapToTickEnabled="True" TickFrequency="1" />
-      <NumericUpDown Minimum="0" Maximum="360" Increment="1" Value="{Binding #Pitch.Value}" />
+      <Slider x:Name="Pitch" Value="45" />
+      <NumericUpDown Value="{Binding #Pitch.Value}" />
       <Label Content="Roll" />
-      <Slider x:Name="Roll" Value="45" Minimum="0" Maximum="360" SmallChange="0.1" LargeChange="1" IsSnapToTickEnabled="True" TickFrequency="1" />
-      <NumericUpDown Minimum="0" Maximum="360" Increment="1" Value="{Binding #Roll.Value}" />
+      <Slider x:Name="Roll" Value="45" />
+      <NumericUpDown Value="{Binding #Roll.Value}" />
     </StackPanel>
 
     <Border Width="500" Height="500" Background="WhiteSmoke">
-
-      <Border.Styles>
-        <Style Selector="Border.animateYaw">
-          <Style.Animations>
-            <Animation Duration="0:0:1" Easing="BounceEaseInOut" SpeedRatio="0.1" IterationCount="Infinite">
-              <KeyFrame Cue="100%">
-                <Setter Property="YawPitchRollTransform.Yaw" Value="360" />
-              </KeyFrame>
-            </Animation>
-          </Style.Animations>
-        </Style>
-        <Style Selector="Border.animatePitch">
-          <Style.Animations>
-            <Animation Duration="0:0:1" Easing="BounceEaseInOut" SpeedRatio="0.1" IterationCount="Infinite">
-              <KeyFrame Cue="100%">
-                <Setter Property="YawPitchRollTransform.Pitch" Value="360" />
-              </KeyFrame>
-            </Animation>
-          </Style.Animations>
-        </Style>
-        <Style Selector="Border.animateRoll">
-          <Style.Animations>
-            <Animation Duration="0:0:1" Easing="BounceEaseInOut" SpeedRatio="0.1" IterationCount="Infinite">
-              <KeyFrame Cue="100%">
-                <Setter Property="YawPitchRollTransform.Roll" Value="360" />
-              </KeyFrame>
-            </Animation>
-          </Style.Animations>
-        </Style>
-      </Border.Styles>
 
       <Border Width="200" Height="200" BorderBrush="Red" BorderThickness="2" CornerRadius="10" 
               Classes.animateYaw="{Binding #AnimateYaw.IsChecked}"
