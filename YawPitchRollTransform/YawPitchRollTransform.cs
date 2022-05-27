@@ -51,12 +51,10 @@ public class YawPitchRollTransform : Transform
         {
             var (yaw, pitch, roll) = (Yaw, Pitch, Roll);
 
-            var quaternion = Quaternion.CreateFromYawPitchRoll(
+            var matrix44 = Matrix4x4.CreateFromYawPitchRoll(
                 (float)Matrix.ToRadians(yaw), 
                 (float)Matrix.ToRadians(pitch), 
                 (float)Matrix.ToRadians(roll));
-
-            var matrix44 = Matrix4x4.CreateFromQuaternion(quaternion);
 
             var matrix = new Matrix(
                 matrix44.M11,
